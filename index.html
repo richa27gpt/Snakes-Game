@@ -14,11 +14,13 @@
       <div class="canvas-container">
         <canvas id="game" aria-label="Snake game canvas"></canvas>
 
-        <div id="overlay" class="overlay hidden" role="dialog" aria-modal="true">
-          <div class="overlay-card">
+        <div id="overlay" class="overlay hidden" role="dialog" aria-modal="true" aria-labelledby="overlay-title" aria-describedby="overlay-score">
+          <div class="overlay-card" tabindex="0">
             <h2 id="overlay-title">Game Over</h2>
             <p id="overlay-score">Score: 0</p>
             <div class="overlay-buttons">
+              <!-- This overlay restart is the only control that can restart the game after Game Over.
+                   It can be activated by clicking it or by pressing Enter while the overlay is visible. -->
               <button id="restartBtnOverlay" class="btn primary">Restart</button>
             </div>
           </div>
