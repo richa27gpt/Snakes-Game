@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Classic Snake</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <h1>Classic Snake</h1>
+      <div class="controls">
+        <div class="score" id="score">Score: 0</div>
+        <div class="buttons">
+          <button id="startBtn" class="btn">Start</button>
+          <button id="resetBtn" class="btn">Reset</button>
+        </div>
+      </div>
+    </header>
+
+    <section class="game-area">
+      <canvas id="gameCanvas" width="600" height="600" aria-label="Snake game canvas"></canvas>
+      <div id="overlay" class="overlay hidden">
+        <div class="overlay-content">
+          <div id="overlayMessage">Game Over</div>
+          <button id="overlayReset" class="btn">Play Again</button>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>Use Arrow Keys (or WASD) to move. No immediate 180° turns.</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
