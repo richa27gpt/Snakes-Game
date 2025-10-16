@@ -7,31 +7,44 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <main class="container">
-    <header class="header">
-      <h1>Classic Snake</h1>
-      <div class="controls">
-        <div class="score" id="score">Score: 0</div>
-        <div class="buttons">
-          <button id="startBtn" class="btn">Start</button>
-          <button id="resetBtn" class="btn">Reset</button>
-        </div>
-      </div>
-    </header>
+  <main class="app">
+    <h1 class="title">Classic Snake</h1>
 
-    <section class="game-area">
-      <canvas id="gameCanvas" width="600" height="600" aria-label="Snake game canvas"></canvas>
-      <div id="overlay" class="overlay hidden">
-        <div class="overlay-content">
-          <div id="overlayMessage">Game Over</div>
-          <button id="overlayReset" class="btn">Play Again</button>
+    <section class="game-wrap">
+      <div class="canvas-container">
+        <canvas id="game" aria-label="Snake game canvas"></canvas>
+
+        <div id="overlay" class="overlay hidden" role="dialog" aria-modal="true">
+          <div class="overlay-card">
+            <h2 id="overlay-title">Game Over</h2>
+            <p id="overlay-score">Score: 0</p>
+            <div class="overlay-buttons">
+              <button id="restartBtnOverlay" class="btn primary">Restart</button>
+            </div>
+          </div>
         </div>
       </div>
+
+      <aside class="controls">
+        <div class="scoreboard">
+          <div>Score</div>
+          <div id="score">0</div>
+        </div>
+
+        <div class="buttons">
+          <button id="startBtn" class="btn primary">Start</button>
+          <button id="pauseBtn" class="btn" disabled>Pause</button>
+          <button id="restartBtn" class="btn">Restart</button>
+        </div>
+
+        <div class="instructions">
+          <strong>How to play</strong>
+          <p>Use arrow keys to move. Eat apples to grow. Don't hit walls or yourself. 180° immediate turns are disabled.</p>
+        </div>
+      </aside>
     </section>
 
-    <footer class="footer">
-      <p>Use Arrow Keys (or WASD) to move. No immediate 180° turns.</p>
-    </footer>
+    <footer class="footer">Built with HTML, CSS & JavaScript — Responsive & classic look.</footer>
   </main>
 
   <script src="script.js"></script>
